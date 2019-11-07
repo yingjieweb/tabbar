@@ -1,5 +1,5 @@
 <template>
-  <div id="tab-bar-item" @click="click">
+  <div id="tab-bar-item" @click="itemClick">
     <div v-if="!isActive"><slot name="item-icon"></slot></div>
     <div v-else><slot name="item-icon-active"></slot></div>
     <div :class="{active:isActive}"><slot name="item-text"></slot></div>
@@ -9,15 +9,18 @@
 <script>
   export default {
     name: "TabBarItem",
+    props:{
+      path:String
+    },
     data(){
       return{
         isActive:false
       }
     },
     methods:{
-      click(){
+      itemClick(){
         console.log("组件被点击了");
-        return this.isActive = !this.isActive
+        this.$router.replace(this.path);//跳转页面
       }
     }
   }
