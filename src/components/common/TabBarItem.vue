@@ -20,7 +20,9 @@
     methods:{
       itemClick(){
         console.log("组件被点击了");
-        this.$router.replace(this.path);//跳转页面
+        if(this.$route.path !== this.path){
+          this.$router.replace(this.path);//跳转页面
+        }
       }
     }
   }

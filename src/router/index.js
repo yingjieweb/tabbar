@@ -34,7 +34,8 @@ const routes = [
   }
 ]
 const router = new VueRouter({
-  routes:routes
+  routes:routes,
+  mode:'history'  //history模式，路径没有#
 })
 
 //3.导出router
