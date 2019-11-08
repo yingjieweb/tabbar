@@ -14,7 +14,22 @@
     },
     data(){
       return{
-        isActive:false
+        //isActive:false
+        activeColor:{
+          type:String,
+          default:'red'
+        }
+      }
+    },
+    computed:{
+      isActive(){//本来这里有个getter和setter，setter一般不写，所以这里是个函数
+        //$route指代当前活跃的路由对象
+        // /home活跃 -> item1（/home）  = true
+        // /home活跃 -> item1（/category）  = false
+        // /home活跃 -> item1（/cart）  = false
+        // /home活跃 -> item1（/profile）  = false
+        //return this.$route.path.indexOf(this.path)  !== -1;
+        return this.$route.path === this.path;
       }
     },
     methods:{
