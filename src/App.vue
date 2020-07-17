@@ -8,12 +8,12 @@
 <script>
   import MainTabBar from 'components/content/MainTabBar'
 
-export default {
-  name: 'app',
-  components: {
-    MainTabBar
+  export default {
+    name: 'app',
+    components: {
+      MainTabBar
+    }
   }
-}
 </script>
 
 <style>
