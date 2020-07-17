@@ -1,29 +1,4 @@
-# tabbar
+## tabbar
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+该项目主要基于 Vue 和 Vue-Router 开发，目的是为了提高移动端开发效率。
+项目中主要提供 TabBar、TabBarItem 两个组件，支持页面切换图标变色等功能。
